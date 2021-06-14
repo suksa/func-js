@@ -14,13 +14,13 @@
 # map
 
 <script>
-  const map = (f, iter) => {
-    let res = [];
-    for (const a of iter) {
-      res.push(f(a));
-    }
-    return res;
-  };
+  // const map = (f, iter) => {
+  //   let res = [];
+  //   for (const a of iter) {
+  //     res.push(f(a));
+  //   }
+  //   return res;
+  // };
 
   // let names = [];
   // for (const p of products) {
@@ -153,4 +153,35 @@
       (total_price, product) => total_price + product.price,
       0,
       products));
+</script>
+
+
+
+
+
+
+
+<script>
+  // const map = (f, iter) => {
+  //   let res = []
+  //   for (const a of iter) {
+  //     res.push(f(a))
+  //   }
+  //   return res
+  // }
+  
+  // console.log(map(p => p.name, products))
+  // console.log(map(p => p.price, products))
+
+  const map = (f, iter) => {
+    const res = []
+    for (const a of iter) {
+      res.push(f(a))
+    }
+    return res
+  }
+
+  log(map(p => p.name, products))
+  log(map(p => p.price, products))
+  
 </script>
